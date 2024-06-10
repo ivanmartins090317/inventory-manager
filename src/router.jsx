@@ -1,5 +1,14 @@
 import { createBrowserRouter } from 'react-router-dom';
 
+import { RootLayout } from './pages/rootLayout/Index';
+import { Home } from './pages/rootLayout/Home';
+
+import { ItemsLayout } from './pages/items/ItemsLayout';
+import { ListItems } from './pages/items/ListItems';
+import { CreateItems } from './pages/items/CreateItems';
+import { ShowItems } from './pages/items/ShowItems';
+import { UpdateItems } from './pages/items/UpdateItems';
+
 const router = createBrowserRouter([{
  path: '/',
  element: <RootLayout />,
@@ -11,19 +20,18 @@ const router = createBrowserRouter([{
     path:'items',
     element: <ItemsLayout />,
     children: [
-      { path:true, 
-        element: <allItems />
+      { index:true, 
+        element: <ListItems />
       },
       { path:'new',
-        element: <createItems />
+        element: <CreateItems />
        },
-      { path:'show',
+      { path:':id',
         element: <ShowItems />
        },
-      { path:'update',
-        element: <updateItems />
+      { path:':id/update',
+        element: <UpdateItems />
        },
-
     ]
   }
 ]
