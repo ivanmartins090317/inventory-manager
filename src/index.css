@@ -3,11 +3,16 @@
   padding:0;
   box-sizing:border-box;
   font-family:sans-serif;
+ 
+}
+[data-js='root']{
+ display:flex;
 }
 body{
   width: 100%;
   margin:5% auto;
   text-align:center;
+  
 }
 h2{
   font-weight:normal;

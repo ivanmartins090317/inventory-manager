@@ -1,9 +1,19 @@
-import { Outlet } from "react-router-dom"
+import { Outlet, Link } from "react-router-dom"
+
+import './rootLayout.css'
 
 const RootLayout = () =>{
   return (
     <>
-     <h1>RootLayout</h1>
+     <div className="container-menu">
+      <div className="container">
+        <div className="logo">LOGO</div>
+        <nav className="nav-menu">
+         <Link to="/">Inicio</Link>
+         <Link to="/items">Items</Link>
+        </nav>
+      </div>
+     </div>
      <Outlet/>
     </>
   )
